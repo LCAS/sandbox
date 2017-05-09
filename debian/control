@@ -1,0 +1,12 @@
+Source: ros-kinetic-catkin-test-pkg
+Section: misc
+Priority: extra
+Maintainer: marc <marc@hanheide.net>
+Build-Depends: debhelper (>= 9.0.0), ros-kinetic-catkin
+Homepage: 
+Standards-Version: 3.9.2
+
+Package: ros-kinetic-catkin-test-pkg
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, 
+Description: The catkin_test_pkg package

@@ -2,7 +2,7 @@
 <package>
   <name>catkin_test_pkg</name>
   <version>0.0.14</version>
-  <description>The catkin_test_pkg package</description>
+  <description>The catkin_test_pkg package also for melodic</description>
 
   <!-- One maintainer tag required, multiple allowed, one person per tag --> 
   <!-- Example:  -->

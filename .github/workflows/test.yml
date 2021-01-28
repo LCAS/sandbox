@@ -14,21 +14,14 @@ on:
 jobs:
   # This workflow contains a single job called "build"
   build:
-    # The type of runner that the job will run on
-    runs-on: [self-hosted]
-
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-    # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
     - uses: actions/checkout@v2
-
-    #- name: Setup catkin
-    #  uses: betwo/github-setup-catkin@v1.0.0
-
-    # Runs a single command using the runners shell
-    - name: Run a one-line script
-      run: echo Hello, world!
-    - name: Run a multi-line script
-      run: |
-        echo Add other actions to build,
-        echo test, and deploy your project.
+    - uses: ros-tooling/setup-ros@v0.1
+      with:
+        required-ros-distributions: melodic
+    - uses: ros-tooling/action-ros-ci@v0.1
+      with:
+        package-name: catkin_test_pkg
+        target-ros1-distro: melodic
+        vcs-repo-file-url: ""

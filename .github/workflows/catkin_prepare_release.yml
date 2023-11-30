@@ -14,6 +14,6 @@ on:
 jobs:
   bloom-release:
     if: github.repository_owner == 'LCAS'
-    uses: LCAS/docker-dpkg-build/.github/workflows/catkin_prepare_release.yaml@master
+    uses: LCAS/docker-dpkg-build/.github/workflows/prepare-release.yaml@master
     with:
       bump: ${{ inputs.bump}}

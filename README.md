@@ -2,7 +2,7 @@
 
 The packages in the `sandbox` repository were released into the `kinetic` distro by running `/usr/bin/bloom-release --non-interactive -t kinetic -r kinetic sandbox` on `Tue, 09 May 2017 16:37:26 -0000`
 
-The `catkin_test_pkg` package was released.
+The `colcon_test_pkg` package was released.
 
 Version of package(s) in repository `sandbox`:
 
@@ -25,7 +25,7 @@ Versions of tools used:
 
 The packages in the `sandbox` repository were released into the `kinetic` distro by running `/usr/bin/bloom-release -n -t kinetic -r kinetic sandbox` on `Tue, 09 May 2017 15:18:07 -0000`
 
-The `catkin_test_pkg` package was released.
+The `colcon_test_pkg` package was released.
 
 Version of package(s) in repository `sandbox`:
 

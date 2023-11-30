@@ -1,5 +1,5 @@
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Changelog for package catkin_test_pkg
+Changelog for package colcon_test_pkg
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 0.0.14 (2017-06-07)

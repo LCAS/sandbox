@@ -1,0 +1,19 @@
+name: bloom-release
+on:
+  workflow_dispatch:
+    inputs:
+      bump:
+        type: choice
+        options: 
+          - patch
+          - minor
+          - major
+        required: true
+        default: patch
+
+jobs:
+  bloom-release:
+    if: github.repository_owner == 'LCAS'
+    uses: LCAS/docker-dpkg-build/.github/workflows/catkin_prepare_release.yaml@master
+    with:
+      bump: ${{ inputs.bump}}

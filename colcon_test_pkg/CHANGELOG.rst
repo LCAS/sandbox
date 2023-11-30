@@ -2,8 +2,8 @@
 Changelog for package colcon_test_pkg
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+1.0.1 (2023-11-30)
+------------------
 * trigger rebuild
 * initial version
 * initial version for humble

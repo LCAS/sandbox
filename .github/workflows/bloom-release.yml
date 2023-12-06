@@ -23,7 +23,7 @@ jobs:
         token: ${{ secrets.ORGA_GH_TOKEN }}  # GitHub Token With Relevant Permissions
         workflow-inputs: |
           {
-            "ros_distro": humble,
-            "track": humble,
-            "repo": "sandbox",      
+            "ros_distro": "humble",
+            "track": "humble",
+            "repo": "sandbox"      
           }

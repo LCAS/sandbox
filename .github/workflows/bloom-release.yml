@@ -1,16 +1,29 @@
 name: bloom-release
 on:
+  workflow_dispatch:
   push:
     tags:
       - '[0-9]+.[0-9]+.[0-9]+'
 
 jobs:
   bloom-release:
+    name: bloom release
     if: github.repository_owner == 'LCAS'
-    uses: LCAS/docker-dpkg-build/.github/workflows/bloom-release.yaml@master
-    with:
-      ros_distro: humble
-      track: humble
-      repo: "sandbox"
-    secrets:
-      GH_API_TOKEN: ${{ secrets.GH_API_TOKEN }}      
+    runs-on: ubuntu-latest
+    steps:
+    - uses: lasith-kg/dispatch-workflow@v1
+      id: workflow-dispatch_develop
+      name: 'Trigger bloom'
+      with:
+        dispatch-method: workflow_dispatch
+        repo: docker-dpkg-build
+        owner: LCAS
+        ref: refs/heads/master  # or main
+        workflow: bloom-release.yaml  # Or Workflow ID
+        token: ${{ secrets.ORGA_GH_TOKEN }}  # GitHub Token With Relevant Permissions
+        workflow-inputs: |
+          {
+            "ros_distro": humble,
+            "track": humble,
+            "repo": "sandbox",      
+          }

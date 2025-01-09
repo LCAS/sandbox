@@ -48,11 +48,11 @@ jobs:
 
     - name: Set up Docker Buildx
       uses: docker/setup-buildx-action@v3
-    #   with:
-    #     buildkitd-config-inline: |
-    #       [registry."cache:5000"]
-    #         http = true
-    #         insecure = true
+      with:
+        buildkitd-config-inline: |
+          [registry."localhost:5000"]
+            http = true
+            insecure = true
 
     - name: "image name from repo name"
       id: docker_image_name

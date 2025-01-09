@@ -4,8 +4,8 @@ on:
   push:
     # you may want to configure the branches that this should be run on here.
     branches: [ "humble" ]
-  pull_request:
-    branches: [ "humble" ]
+  #pull_request:
+  #  branches: [ "humble" ]
 
 jobs:
   test_docker: # On Linux, iterates on all ROS 1 and ROS 2 distributions.

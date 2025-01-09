@@ -58,7 +58,7 @@ jobs:
         file: ./Dockerfile
         platforms: linux/amd64
         push: true
-        cache-from: type=registry,ref=cache:5000/${{ steps.docker_image_name.outputs.docker_image }}:${{ env.BRANCH }}
-        cache-to: type=registry,ref=cache:5000/${{ steps.docker_image_name.outputs.docker_image }}:${{ env.BRANCH }},mode=max
+        cache-from: type=registry,ref=cache:5000/${{ steps.docker_image_name.outputs.docker_image }}:${{ env.BRANCH }},registry.insecure=true
+        cache-to: type=registry,ref=cache:5000/${{ steps.docker_image_name.outputs.docker_image }}:${{ env.BRANCH }},mode=max,registry.insecure=true
         tags: ${{ steps.meta.outputs.tags }}
         labels: ${{ steps.meta.outputs.labels }}

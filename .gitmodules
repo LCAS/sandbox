@@ -1,0 +1,3 @@
+[submodule "sentor"]
+	path = sentor
+	url = https://github.com/LCAS/sentor.git
